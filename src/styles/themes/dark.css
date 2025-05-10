@@ -1,0 +1,6 @@
+.app.dark {
+  --primary-color: #fff;
+  --secondary-color: #71717a;
+  --mute-color: #f4f4f5;
+  --inverted-color: #09090b;
+}

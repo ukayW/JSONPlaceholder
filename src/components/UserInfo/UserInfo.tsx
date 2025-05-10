@@ -1,5 +1,6 @@
 import { useFetch } from '../../hooks/useFetch';
 import { Avatar } from '../UI/Avatar/Avatar';
+import { UserTabs } from '../UI/Tabs/UserTabs';
 import styles from './UserInfo.module.scss';
 
 export const UserInfo = ({ userId }: { userId: string | undefined }) => {
@@ -28,17 +29,7 @@ export const UserInfo = ({ userId }: { userId: string | undefined }) => {
           </a>
         </div>
       </div>
-
-      <p>City: {data.address.city}</p>
-      <p>Lat: {data.address.geo.lat}</p>
-      <p>Lng: {data.address.geo.lng}</p>
-      <p>Street: {data.address.street}</p>
-      <p>Suite: {data.address.suite}</p>
-      <p>Zipcode: {data.address.zipcode}</p>
-
-      <p>Company: {data.company.name}</p>
-      <p>Company catchPhrase: {data.company.catchPhrase}</p>
-      <p>Company bs: {data.company.bs}</p>
+      <UserTabs data={data} />
     </div>
   );
 };
