@@ -1,44 +1,16 @@
-import { useEffect, useState } from 'react';
-
 import styles from './UserList.module.scss';
-import { Link } from 'react-router-dom';
 import { AppLink } from '../UI/Link/Link';
+import { useFetch } from '../../hooks/useFetch';
 
 export const UserList = () => {
-  const [users, setUsers] = useState<User[]>([]);
-  const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [error, setError] = useState<Error | null>(null);
-
-  const fetchUsers = async (): Promise<User[] | undefined> => {
-    try {
-      setIsLoading(true);
-      const response = await fetch('https://jsonplaceholder.typicode.com/users');
-
-      if (!response.ok) throw new Error('Fail fetch users');
-
-      const data = await response.json();
-
-      setIsLoading(false);
-      setUsers(data);
-
-      return data;
-    } catch (error) {
-      if (error instanceof Error) {
-        setError(error);
-      } else {
-        setError(new Error('An unknown error occurred'));
-      }
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    fetchUsers();
-  }, []);
+  const {
+    data: users,
+    isLoading,
+    error,
+  } = useFetch<User[]>('https://jsonplaceholder.typicode.com/users');
 
   return (
-    <>
+    <div className="userList">
       {isLoading && <div>Loading...</div>}
       {error && <div>Error: {error.message}</div>}
       {users && (
@@ -48,6 +20,6 @@ export const UserList = () => {
           ))}
         </div>
       )}
-    </>
+    </div>
   );
 };
