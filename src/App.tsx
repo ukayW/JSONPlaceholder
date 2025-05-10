@@ -3,10 +3,10 @@ import { RouterProvider } from './providers/RouterProvider';
 
 function App() {
   return (
-    <>
+    <div className="wrapper">
       <Header />
       <RouterProvider />
-    </>
+    </div>
   );
 }
 

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 
 import styles from './UserList.module.scss';
 import { Link } from 'react-router-dom';
+import { AppLink } from '../UI/Link/Link';
 
 export const UserList = () => {
   const [users, setUsers] = useState<User[]>([]);
@@ -43,9 +44,7 @@ export const UserList = () => {
       {users && (
         <div className={styles.root}>
           {users.map((user) => (
-            <Link to={`/users/${user.id}`} key={user.id}>
-              {user.email}
-            </Link>
+            <AppLink to={`/users/${user.id}`} key={user.id} label={user.email} />
           ))}
         </div>
       )}
