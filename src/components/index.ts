@@ -1,0 +1,7 @@
+export * from './Header/Header'
+export * from './UserAlbums/UserAlbums'
+export * from './UserInfo/UserInfo'
+export * from './UserList/UserList'
+export * from './UserMedia/UserMedia'
+export * from './UserPosts/UserPosts'
+export * from './UserTabs/UserTabs'

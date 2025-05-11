@@ -1,6 +1,6 @@
-import { useFetch } from '../../hooks/useFetch';
-import { Avatar } from '../UI/Avatar/Avatar';
-import { UserTabs } from '../UI/Tabs/UserTabs';
+import { useFetch } from '@/hooks';
+import { Avatar } from '@/components/UI';
+import { UserTabs } from '@/components';
 import styles from './UserInfo.module.scss';
 
 export const UserInfo = ({ userId }: { userId: string | undefined }) => {

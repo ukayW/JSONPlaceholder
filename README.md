@@ -1,54 +1,62 @@
-# React + TypeScript + Vite
+# JSON Placeholder App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Пет проект для работы с REST
 
-Currently, two official plugins are available:
+## 1. Используемые технологии
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Основные технологии: React
+Код пишем на TypeScript
+Собираем на Vite
 
-## Expanding the ESLint configuration
+## 2. Список технологий
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+| Технология | Версия | Описание                        | Ссылка                          |
+| ---------- | ------ | ------------------------------- | ------------------------------- |
+| React      | 19.0.0 | Библиотека для разработки UI    | https://react.dev               |
+| Typescript | 5.7.2  | Надстройка типов над JavaScript | https://www.typescriptlang.org/ |
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 3. Установка
+
+1. Склонировать репозиторий в текущую директорию
+   ```shell
+   git clone https://github.com/ukayW/JSONPlaceholder
+   ```
+2. Перейти в директорию с проектом
+   ```shell
+   cd ./JSONPlaceholder
+   ```
+3. Установить зависимости
+   ```shell
+   npm install
+   ```
+
+## 4. Запуск (в режиме разработки)
+
+```shell
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 5. Версионность
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+При обозначении версионности используем формат `major.minor.patch`
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+- major (Мажор) - изменения ломающие обратную совместимость для сторонних клиентов _(Пример: новый обязательный параметр)_
+- minor (Минор) - изменения не ломающие обратную совместимость для сторонних клиентов _(Пример: расширение ответа, добавление нового необязательно параметра)_
+- path (Патч) - дополнения в коде не меняющие поведение для сторонних клиентов _(Пример: рефакторинг, обновление библиотек, замена логгера, и.т.д..)_
+
+## 6. Требования к именам коммитов
+
+- Названия коммитов должны быть согласно [гайдлайну](https://www.conventionalcommits.org/en/v1.0.0/)
+- Тип коммита должен быть только в нижнием регистре (`feat`, `fix`, `refactor`, `docs` и т.д.)
+- Должен использоваться present tense ("add feature" not "added feature")
+- Должен использоваться imperative mood ("move cursor to..." not "moves cursor to...")
+
+### Примеры имен коммитов
+
+```
+init: start project
+feat: implement search box
+fix: adjust social links for mobile
+refactor: change structure of the project
+docs: update readme with additional information
 ```

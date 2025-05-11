@@ -1,5 +1,5 @@
 import styles from './Header.module.scss';
-import { AppLink } from '../UI/Link/Link';
+import { AppLink } from '@/components/UI';
 import { useLocation } from 'react-router-dom';
 
 export const Header = () => {

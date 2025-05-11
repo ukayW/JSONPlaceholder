@@ -1,9 +1,9 @@
-import { Header } from './components/Header/Header';
-import { RouterProvider } from './providers/RouterProvider';
+import { Header } from '@/components';
+import { RouterProvider } from '@/providers';
 
 function App() {
   return (
-    <div className="wrapper app">
+    <div className="wrapper app light">
       <Header />
       <RouterProvider />
     </div>
