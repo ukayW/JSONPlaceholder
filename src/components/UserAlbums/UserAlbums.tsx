@@ -1,4 +1,4 @@
-import { useFetch } from '../../hooks/useFetch';
+import { useFetch } from '@/hooks';
 import styles from './UserAlbums.module.scss';
 
 export const UserAlbums = ({ userId }: { userId: string | undefined }) => {

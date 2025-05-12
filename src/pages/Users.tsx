@@ -1,9 +1,5 @@
-import { UserList } from '../components/UserList/UserList';
+import { UserList } from '@/components';
 
 export const Users = () => {
-  return (
-    <div>
-      <UserList />
-    </div>
-  );
+  return <UserList />;
 };

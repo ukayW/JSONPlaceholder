@@ -1,6 +1,6 @@
 .root {
   padding: 8px;
-  border: 2px solid #f4f4f5;
+  border: 2px solid var(--mute-color);
   border-radius: 8px;
 }
 .user {
@@ -15,22 +15,22 @@
   }
   .userNameEmail {
     font-weight: 500;
-    color: #71717A;
+    color: var(--secondary-color);
     margin-bottom: 8px;
   }
   .userNamePhone {
     display: flex;
     padding-top: 8px;
-    border-top: 2px solid #f4f4f5;
+    border-top: 2px solid var(--mute-color);
     width: 100%;
 
     font-size: 14px;
-    color: #09090B;
+    color: var(--primary-color);
     text-decoration: none;
   }
   .userNameWebsite {
     font-size: 14px;
-    color: #09090B;
+    color: var(--primary-color);
     text-decoration: none;
   }
 }

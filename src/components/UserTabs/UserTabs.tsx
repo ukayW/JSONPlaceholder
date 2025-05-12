@@ -1,4 +1,4 @@
-import { Tabs } from './Tabs';
+import { Tabs } from '@/components/UI';
 import styles from './UserTabs.module.scss';
 
 export const UserTabs = ({ data }: { data: User }) => {
@@ -13,7 +13,7 @@ export const UserTabs = ({ data }: { data: User }) => {
           <p>Lat: {data.address.geo.lat}</p>
           <p>Lng: {data.address.geo.lng}</p>
           <p>Suite: {data.address.suite}</p>
-          <p>Suite: {data.address.zipcode}</p>
+          <p>Zipcode: {data.address.zipcode}</p>
         </>
       ),
     },

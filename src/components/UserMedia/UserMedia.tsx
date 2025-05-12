@@ -1,6 +1,5 @@
-import { UserAlbums } from '../../UserAlbums/UserAlbums';
-import { UserPosts } from '../../UserPosts/UserPosts';
-import { Tabs } from '../Tabs/Tabs';
+import { UserPosts, UserAlbums } from '@/components';
+import { Tabs } from '@/components/UI';
 
 import styles from './UserMedia.module.scss';
 

@@ -1,6 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { UserInfo } from '../components/UserInfo/UserInfo';
-import { UserMedia } from '../components/UI/UserMedia/UserMedia';
+import { UserInfo, UserMedia } from '@/components';
 
 export const User = () => {
   const { id } = useParams();

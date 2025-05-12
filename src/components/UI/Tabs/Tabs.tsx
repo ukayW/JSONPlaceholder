@@ -1,18 +1,6 @@
 import { useState } from 'react';
 import styles from './Tabs.module.scss';
 
-interface TabItem {
-  id: number;
-  label: string;
-  content: React.ReactNode;
-}
-
-interface TabsProps {
-  tabs: TabItem[];
-  defaultActiveId?: number;
-  className?: string;
-}
-
 export const Tabs = ({ tabs, defaultActiveId, className = '' }: TabsProps) => {
   const [activeId, setActiveId] = useState(defaultActiveId || tabs[0]?.id);
 

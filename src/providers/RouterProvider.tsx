@@ -1,7 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import { Users } from '../pages/Users';
-import { Home } from '../pages/Home';
-import { User } from '../pages/User';
+import { User, Users, Home } from '@/pages';
 
 export const RouterProvider = () => {
   return (

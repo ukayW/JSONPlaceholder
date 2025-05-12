@@ -1,0 +1,45 @@
+.root {
+  width: fit-content;
+  overflow-x: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 6px solid var(--mute-color);
+  border-radius: 8px;
+  background: white;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+
+  &::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+  }
+  .thead {
+    background-color: var(--mute-color);
+    text-align: left;
+    position: sticky;
+    top: 0;
+    .tr {
+      .th {
+        padding: 6px 14px;
+      }
+    }
+  }
+  .tbody {
+    .tr {
+      border-bottom: 1px solid var(--secondary-color);
+      &:last-child {
+      border-bottom: none; }
+      .td {
+        padding: 6px 14px;
+      }
+      &.clickableRow {
+        cursor: pointer;
+
+        &:hover {
+          background-color: var(--hover-color);
+        } }
+    }
+    
+  }
+}
