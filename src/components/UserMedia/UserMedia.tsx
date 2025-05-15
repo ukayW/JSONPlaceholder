@@ -1,13 +1,13 @@
-import { UserPosts, UserAlbums } from '@/components';
-import { Tabs } from '@/components/UI';
+import { UserPosts, UserAlbums } from '@/components'
+import { Tabs } from '@/components/UI'
 
-import styles from './UserMedia.module.scss';
+import styles from './UserMedia.module.scss'
 
 export const UserMedia = ({ id }: { id: string | undefined }) => {
   const tabs = [
     {
       id: 0,
-      label: 'Album',
+      label: 'Albums',
       content: (
         <>
           <UserAlbums userId={id} />
@@ -23,7 +23,7 @@ export const UserMedia = ({ id }: { id: string | undefined }) => {
         </>
       ),
     },
-  ];
+  ]
 
-  return <Tabs className={styles.root} tabs={tabs} defaultActiveId={0} />;
-};
+  return <Tabs className={styles.root} tabs={tabs} defaultActiveId={0} />
+}

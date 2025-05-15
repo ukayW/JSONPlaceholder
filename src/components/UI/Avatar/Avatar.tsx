@@ -1,4 +1,4 @@
-import styles from './Avatar.module.scss';
+import styles from './Avatar.module.scss'
 export const Avatar = () => {
-  return <img className={styles.root} src="https://placehold.co/50x50" alt="" />;
-};
+  return <img className={styles.root} src="https://placeholder.pagebee.io/api/random/400/300" alt="" />
+}
