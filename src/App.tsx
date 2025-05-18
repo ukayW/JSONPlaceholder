@@ -1,13 +1,18 @@
-import { Header } from '@/components';
-import { RouterProvider } from '@/providers';
+import { Header } from '@/components'
+import { RouterProvider } from '@/providers'
+import { ThemeProvider } from './components/contexts/ThemeContext'
+import { ThemeToggle } from './components/UI/ThemeToggle'
 
 function App() {
   return (
-    <div className="wrapper app light">
-      <Header />
-      <RouterProvider />
-    </div>
-  );
+    <ThemeProvider>
+      <div className="wrapper">
+        <ThemeToggle />
+        <Header />
+        <RouterProvider />
+      </div>
+    </ThemeProvider>
+  )
 }
 
-export default App;
+export default App

@@ -20,9 +20,11 @@
       grid-template-columns: repeat(3, 100px);
       grid-template-rows: repeat(3, 100px);
       .img {
-          width: 100px;
-          height: 100px;
-          object-fit: cover;
+        border: 1px solid var(--primary-color);
+        border-radius: 20px;
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
       }
     }
     h3{
