@@ -13,14 +13,14 @@ export const UserAlbums = ({ userId }: { userId: string | undefined }) => {
   return (
     <div className={styles.root}>
       {data.map((al) => (
-        <p className={styles.albumItem} key={al.id}>
+        <span className={styles.albumItem} key={al.id}>
           <div className={styles.grid}>
             {images.map(() => (
               <img className={styles.img} src="https://placeholder.pagebee.io/api/random/100/100" />
             ))}
           </div>
           <h3>{al.title}</h3>
-        </p>
+        </span>
       ))}
     </div>
   )

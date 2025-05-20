@@ -3,8 +3,12 @@
 @import url('./themes/dark.css');
 @import url('./themes/light.css');
 
+html {
+  overflow-x: hidden;
+}
 body {
   font-family: 'Roboto', sans-serif;
+  background-color: var(--primary-color);
 }
 
 .wrapper {

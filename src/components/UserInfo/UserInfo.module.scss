@@ -2,8 +2,10 @@
   padding: 8px;
   border: 2px solid var(--mute-color);
   border-radius: 8px;
+  background-color: var(--third-color);
 }
 .user {
+  background-color: var(--third-color);
   display: flex;
   align-items: center;
 }
@@ -11,6 +13,7 @@
   width: 100%;
   padding: 8px;
   .userName {
+    color: var(--inverted-color);
     font-weight: 500;
   }
   .userNameEmail {
@@ -25,12 +28,12 @@
     width: 100%;
 
     font-size: 14px;
-    color: var(--primary-color);
+    color: var(--inverted-color);
     text-decoration: none;
   }
   .userNameWebsite {
     font-size: 14px;
-    color: var(--primary-color);
+    color: var(--inverted-color);
     text-decoration: none;
   }
 }
