@@ -1,7 +1,7 @@
 import { Header } from '@/components'
 import { RouterProvider } from '@/providers'
-import { ThemeProvider } from './components/contexts/ThemeContext'
-import { ThemeToggle } from './components/UI/ThemeToggle'
+import { ThemeProvider } from '@/providers'
+import { ThemeToggle } from '@/components/UI'
 
 function App() {
   return (
